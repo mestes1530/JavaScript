@@ -1,6 +1,53 @@
-﻿// Global variables used to keep track of game state 
+// Global variables used to keep track of game state 
 let activePlayer = 'X';
 let selectedSquares = [];
+
+// Function that draws a line across the 3 in a row using canvas and its coords
+function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
+    // Gets the canvas element to draw on it
+    const canvas = document.getElementById('win-lines');
+    const c = canvas.getContext('2d');
+    let x1 = coordX1,
+        y1 = coordY1,
+        x2 = coordX2,
+        y2 = coordY2,
+        x = x1,
+        y = y1;
+
+
+    // Function that interacts with the canvas drawing the line in animated way 
+    function animateLineDrawing() {
+        const animationLoop = requestAnimationFrame(animateLineDrawing);
+        // Defines the animation pattern 
+        c.clearReact(0, 0, 608, 608);
+        c.beginPath();
+        c.moveTo(x1, y1);
+        c.lineTo(x, y);
+        c.lineTo(x, y);
+        c.lineWidth = 10;
+        c.strokeStyle = 'rgba(70, 255, 33, .8)';
+        c.stroke();
+        if (x1 <= x2 && y1 <= y2) {
+            if (x < x2) { x += 10; }
+            if (y < y2) { y += 10; }
+            if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
+        }
+    }
+
+    // Nested function that clears the board after the winning line is drawn
+    function clear() {
+        const animationLoop = requestAnimationFrame(clear);
+        c.clearReact(0, 0, 608, 608);
+        cancelAnimationFrame(animationLoop);
+    }
+
+    // Final steps after a winner is choosen 
+    disableClick();
+    audio('./media/winGame.mp3');
+    animateLineDrawing();
+    setTimeout(function () { clear(); resetGame(); }, 1000);
+}
+
 
 // Function called whenever a player makes a move to see if their is a winner
 function checkWinConditions() {
