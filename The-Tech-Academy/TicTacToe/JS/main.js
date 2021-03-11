@@ -2,9 +2,18 @@
 let activePlayer = 'X';
 let selectedSquares = [];
 
+// Function that resets the board after a win or tie
+function resetGame() {
+    for (let i = 0; i < 9; i++) {
+        let square = document.getElementById(String(i));
+        square.style.backgroundImage = '';
+    }
+    selectedSquares = [];
+}
+
 // Function that draws a line across the 3 in a row using canvas and its coords
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
-    // Gets the canvas element to draw on it
+    // Gets the canvas element to draw on it 
     const canvas = document.getElementById('win-lines');
     const c = canvas.getContext('2d');
     let x1 = coordX1,
@@ -15,11 +24,11 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         y = y1;
 
 
-    // Function that interacts with the canvas drawing the line in animated way 
+    // Function that interacts with the canvas drawing the line in animated way  
     function animateLineDrawing() {
         const animationLoop = requestAnimationFrame(animateLineDrawing);
         // Defines the animation pattern 
-        c.clearReact(0, 0, 608, 608);
+        c.clearRect(0, 0, 608, 608);
         c.beginPath();
         c.moveTo(x1, y1);
         c.lineTo(x, y);
@@ -34,14 +43,14 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         }
     }
 
-    // Nested function that clears the board after the winning line is drawn
+    // Nested function that clears the board after the winning line is drawn 
     function clear() {
         const animationLoop = requestAnimationFrame(clear);
-        c.clearReact(0, 0, 608, 608);
+        c.clearRect(0, 0, 608, 608);
         cancelAnimationFrame(animationLoop);
     }
 
-    // Final steps after a winner is choosen 
+    // Final steps after a winner is choosen  
     disableClick();
     audio('./media/winGame.mp3');
     animateLineDrawing();
@@ -84,7 +93,7 @@ function checkWinConditions() {
     }
 }
 
-// Makes the screen unclickable for the player while the computer makes move
+// Makes the screen unclickable for the player while the computer makes move 
 function disableClick() {
     body.style.pointerEvents = 'none';
     setTimeout(function () { body.style.pointerEvents = 'auto'; }, 1000);
@@ -100,7 +109,7 @@ function audio(audioURL) {
 function placeXOrO(squareNumber) {
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         let select = document.getElementById(squareNumber);
-        // Outcome differs depending on the symbol the player is using
+        // Outcome differs depending on the symbol the player is using 
         if (activePlayer === 'X') {
             select.style.backgroundImage = 'url("images/x.png")';
         } else {
