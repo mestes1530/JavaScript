@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Banksy Bank</title>
+    <!-- Links to the CSS style sheet -->
+    <link rel="stylesheet" type="text/css" href="one_page_website.css" />
+</head>
+<body>
+    <header>
+        <nav class="NavBar">
+            <a class="NavItem" href="#About">About</a>
+            <a class="NavItem" href="#Gallery">Gallery</a>
+            <a class="NavItem" href="#Contact">Contact</a>
+        </nav>
+        <hr />
+        <img id="TitlePic" src="Photos/title_pic.jpg" />
+        <h1 id="PageTitle">Banksy Bank</h1>
+        <hr />
+    </header>
+    <!-- About Section -->
+    <section id="About" class="SectionContainer">
+        <hr />
+        <h2 class="SectionHeading">About</h2>
+        <p>
+            &nbsp;&nbsp;The "Banksy Bank" is a collection of pictures of street art projects done by the artist who goes by the name Banksy.
+            The navigation bar above can be used to go to the photo gallery of Banksy's pieces and to the contact form so you can reach out
+            to us with information about possible Banksy pieces you may encounter so we can add them to our bank. This single page website
+            is a portfolio piece designed to show off my knowledge and usage of HTML and CSS.
+        </p>
+        <hr />
+    </section>
+    <!-- Image Gallery Section -->
+    <section id="Gallery" class="SectionContainer">
+        <hr />
+        <h2 class="SectionHeading">Gallery</h2>
+        <div class="ArtContainer">
+            <div class="row">
+                <div class="colum">
+                    <img class="ArtPiece" src="Photos/balloon.png" alt="ballon" onclick="openModal();currentSlide(1)" />
+                </div>
+                <div class="colum">
+                    <img class="ArtPiece" src="Photos/cat.jpg" alt="cat" onclick="openModal();currentSlide(2)" />
+                </div>
+                <div class="colum">
+                    <img class="ArtPiece" src="Photos/dreams.jpg" alt="dreams" onclick="openModal();currentSlide(3)" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="colum">
+                    <img class="ArtPiece" src="Photos/flowers.png" alt="flowers" onclick="openModal();currentSlide(4)" />
+                </div>
+                <div class="colum">
+                    <img class="ArtPiece" src="Photos/robot.jpg" alt="robot" onclick="openModal();currentSlide(5)" />
+                </div>
+                <div class="colum">
+                    <img class="ArtPiece" src="Photos/stock.jpg" alt="stock" onclick="openModal();currentSlide(6)" />
+                </div>
+            </div>
+        </div>
+        <!-- The Photo Modal that appears when picture is clicked -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="Photos/balloon.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="Photos/cat.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="Photos/dreams.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="Photos/flowers.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="Photos/robot.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="Photos/stock.jpg" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <!-- Displays all photos on the modal -->
+                <div class="column">
+                    <img class="demo cursor" src="Photos/balloon.png" style="width:100%" onclick="currentSlide(1)" alt="Girl and a Baloon">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Photos/cat.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cat in Gaza">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Photos/dreams.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cancelled Dreams">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Photos/flowers.png" style="width:100%" onclick="currentSlide(4)" alt="Throwing Flowers">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Photos/robot.jpg" style="width:100%" onclick="currentSlide(5)" alt="Spray Painting Robot">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="Photos/stock.jpg" style="width:100%" onclick="currentSlide(6)" alt="Stock Abuse">
+                </div>
+            </div>
+        </div>
+        <hr />
+    </section>
+    <!-- Contact Section -->
+    <section id="Contact" class="SectionContainer">
+        <hr />
+        <h2 class="SectionHeading">Contact</h2>
+        <p>Include the location of any newly found Banksy pieces and your email so we may reach out for questions.</p>
+        <form>
+            <input width="100%" type="text" placeholder="Location" />
+            <input type="email" placeholder="Email" />
+            <button type="submit">Submit</button>
+        </form>
+        <hr />
+    </section>
+    <!-- Webpage Footer -->
+    <footer>
+        <hr />
+        <center><h5>Website By Mitchell Estes; © 2021</h5></center>
+        <hr />
+    </footer>
+    <!-- Links to JavaScript, calculator's functionality -->
+    <script src="JS/main.js"></script>
+</body>
+</html>
