@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<!-- Link to my Formspree Contact: https://formspree.io/f/mrgoveee -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>🃏Poker Hands🃏</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap_project.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">🃏Poker Hands🃏</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#AboutWebsite" data-toggle="tooltip" title="Explains purpose behind website">About Webpage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#TypesOfPoker" data-toggle="tooltip" title="Details the diffrences between poker rules">Types Of Poker"</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#HandsRanked" data-toggle="tooltip" title="Orders the ranking of poker hands">Hands Ranked"</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-toggle="tooltip" title="Dropdown that links to specific hands">
+                            Poker Hands
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#RoyalFlush">Royal Flush</a></li>
+                            <li><a class="dropdown-item" href="#StraightFlush">Straight Flush</a></li>
+                            <li><a class="dropdown-item" href="#FourOfAKind">Four Of A Kind</a></li>
+                            <li><a class="dropdown-item" href="#Full House">Full House</a></li>
+                            <li><a class="dropdown-item" href="#Flush">Flush</a></li>
+                            <li><a class="dropdown-item" href="#Straight">Straight</a></li>
+                            <li><a class="dropdown-item" href="#ThreeOfAKind">Three Of A Kind</a></li>
+                            <li><a class="dropdown-item" href="#TwoPair">Two Pair</a></li>
+                            <li><a class="dropdown-item" href="#Pair">Pair</a></li>
+                            <li><a class="dropdown-item" href="#HighCard">High Card</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="MainDiv">
+        <section id="AboutWebsite">
+            <h1 class="section-heading">About Website:</h1>
+            <div class="text-box">
+                <p>
+                    &nbsp;&nbsp;&nbsp;This website details the basic diffrences between types of poker games and displays the order of poker hands in desending order,
+                    based off which hands beat which. The "Types Of Poker" section below describes some of the diffrences between popular variations of poker, and the
+                    section below it, "Poker Hands", shows the ranking of poker hands in descending order. This website was created to be an HTML and CSS portfolio
+                    piece and utilizizes the Bootstrap library.
+                </p>
+            </div>
+        </section>
+        <br />
+        <section id="TypesOfPoker">
+            <h1 class="section-heading">Types Of Poker:</h1>
+            <div class="text-box">
+                <p>
+                    &nbsp;&nbsp;&nbsp;There are a variety of ways to play poker, that differ depending on how cards are added to play and how many cards each player
+                    has in their hand. Below are three of the most popular types of poker and brief explanation of their rules:
+                </p>
+                <hr />
+                <p>
+                    <strong>Texas Hold 'Em: </strong> The most popular and easiest to learn, Texas Hold 'Em is plaid with each player being delt two pocket cards and
+                    can use any of the five communal cards to make a hand. It lasts four rounds of betting with communal cards added each round.<br /><br />
+                    <strong>Omaha: </strong> Like Texas Hold 'Em, Omaha is plaid for four rounds with five communal cards, however in Omaha all the communal cards are
+                    revealed at once. It also differs from the other versions as each player has four cards in their hand.<br /><br />
+                    <strong>5-Card Draw: </strong> In 5-Card draw each player is dealt 5 cards and then is allowed to use three of the communal cards instead of the
+                    cards they were originally dealt. <br /><br />
+                </p>
+            </div>
+        </section>
+        <br />
+        <section id="HandsRanked">
+            <h1 class="section-heading">Poker Hands:</h1>
+            <div class="card-holder">
+                <div class="card" id="RoyalFlush">
+                    <img src="Photos/royal-flush.png" class="card-img-top" alt="Royal Flush">
+                    <div class="card-body">
+                        <h3 class="card-name">Royal Flush</h3>
+                        <p class="card-text">
+                            A royal flush is five cards in order starting with a 10 and ending in an Ace, all these cards must also be in the same suit. This is
+                            the best possible hand in poker and beats all others.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">Straight</span>
+                        <span class="badge rounded-pill bg-danger">Flush</span>
+                        <span class="badge rounded-pill bg-danger">Highest Card</span>
+                    </div>
+                </div>
+                <div class="card" id="StraightFlush">
+                    <img src="Photos/straight-flush.png" class="card-img-top" alt="Straight Flush">
+                    <div class="card-body">
+                        <h3 class="card-name">Straight Flush</h3>
+                        <p class="card-text">
+                            A stright flush is a straight, five cards in a row, as well as a flush, five cards of the same suite. However its
+                            straight can only go only as high as 9 through King, as 10 through Ace would be a royal flush.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">Straight</span>
+                        <span class="badge rounded-pill bg-danger">Flush</span>
+                    </div>
+                </div>
+                <div class="card" id="FourOfAKind">
+                    <img src="Photos/four-of-a-kind.png" class="card-img-top" alt="Four Of A Kind">
+                    <div class="card-body">
+                        <h3 class="card-name">Four Of A Kind</h3>
+                        <p class="card-text">
+                            Four of a kind is when the player has four cards with the same value, with the four diffrent suites. The last
+                            card included in the hand is the single highest avaliable cards besides the four of a kind group.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">Four Of A Kind</span>
+                    </div>
+                </div>
+                <div class="card" id="FullHouse">
+                    <img src="Photos/full-house.png" class="card-img-top" alt="Full House">
+                    <div class="card-body">
+                        <h3 class="card-name">Full House</h3>
+                        <p class="card-text">
+                            A full house is three of a kind of one type of card value amd then a pair of two other cards of the same value.
+                            The player with the highest three of a card value wins the full house tiebreaker.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">Three Of A Kind</span>
+                        <span class="badge rounded-pill bg-danger">Pair</span>
+                    </div>
+                </div>
+                <div class="card" id="Flush">
+                    <img src="Photos/flush.png" class="card-img-top" alt="Flush">
+                    <div class="card-body">
+                        <h3 class="card-name">Flush</h3>
+                        <p class="card-text">
+                            A flush is five cards of the same suite, for example five spade cards. Cards in a flush are not in order
+                            otherwise it would be a straight flush or royal flush.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">Flush</span>
+                    </div>
+                </div>
+                <div class="card" id="Straight">
+                    <img src="Photos/straight.png" class="card-img-top" alt="Straight">
+                    <div class="card-body">
+                        <h3 class="card-name">Straight</h3>
+                        <p class="card-text">
+                            A straight is five cards in order in diffrent suites, the player with the highest card value at the end of the
+                            straight wins tiebreakers. If the cards were in the same it would be a royal or straight flush.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">Straight</span>
+                    </div>
+                </div>
+                <div class="card" id="ThreeOfAKind">
+                    <img src="Photos/three-of-a-kind.png" class="card-img-top" alt="Three Of A Kind">
+                    <div class="card-body">
+                        <h3 class="card-name">Three Of A Kind</h3>
+                        <p class="card-text">
+                            Three of a kind consists of three cards of the same value with diffrent suites, as well as two other unrelated
+                            high cards. Tiebreakers are settled first by who has the highest three of a kind then individual high cards.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">Three Of A Kind</span>
+                    </div>
+                </div>
+                <div class="card" id="TwoPair">
+                    <img src="Photos/two-pair.png" class="card-img-top" alt="Two Pair">
+                    <div class="card-body">
+                        <h3 class="card-name">Two Pair</h3>
+                        <p class="card-text">
+                            Two pair is two diffrent pairs (two cards of the same value and diffrent suites) and one extra high card. The
+                            tiebreaker is determined whoever has the highest value of pairs.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">Pair</span>
+                        <span class="badge rounded-pill bg-danger">Pair</span>
+                    </div>
+                </div>
+                <div class="card" id="">
+                    <img src="Photos/pair.png" class="card-img-top" alt="Pair">
+                    <div class="card-body">
+                        <h3 class="card-name">Pair</h3>
+                        <p class="card-text">
+                            A pair are two cards of the same value but diffrent suites. It also consists of three additional cards that
+                            have no other pairs, otherwise it would be a full house or two pair.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">Pair</span>
+                    </div>
+                </div>
+                <div class="card" id="HighestCard">
+                    <img src="Photos/high-card.png" class="card-img-top" alt="High Card">
+                    <div class="card-body">
+                        <h3 class="card-name">High Card</h3>
+                        <p class="card-text">
+                            When there is no pairs, flushes or straights, then the hand's value is determined by its highest value card.
+                            Ace is usually considered the highest, followed by face cards than number cards.
+                        </p>
+                        <hr />
+                        <span class="badge rounded-pill bg-danger">High Card</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br />
+    </div>
+    <!-- Links to JavaScript -->
+    <script src="JS/main.js"></script>
+</body>
+</html>

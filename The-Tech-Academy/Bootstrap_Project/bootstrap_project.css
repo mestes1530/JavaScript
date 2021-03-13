@@ -1,0 +1,39 @@
+﻿body {
+    background-color: green;
+}
+
+#MainDiv {
+    padding: 1%;
+}
+
+.navbar {
+    border: 2px solid;
+}
+
+.section-heading {
+    color: white;
+    text-shadow: 2px 2px darkgray;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-left: 20px;
+}
+
+.text-box {
+    border: 2px solid;
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.card {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    padding: 1%;
+    border: 2px solid;
+    border-radius: 25px;
+}
