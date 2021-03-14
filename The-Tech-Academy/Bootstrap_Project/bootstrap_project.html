@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- Link to my Formspree Contact: https://formspree.io/f/mrgoveee -->
 <html>
 <head>
@@ -6,6 +6,9 @@
     <title>🃏Poker Hands🃏</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Refrences CSS stylesheet -->
     <link rel="stylesheet" type="text/css" href="bootstrap_project.css" />
 </head>
 <body>
@@ -15,6 +18,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Added Tooltips to NavBar-->
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -91,9 +95,16 @@
                             the best possible hand in poker and beats all others.
                         </p>
                         <hr />
-                        <span class="badge rounded-pill bg-danger">Straight</span>
-                        <span class="badge rounded-pill bg-danger">Flush</span>
-                        <span class="badge rounded-pill bg-danger">Highest Card</span>
+                        <!-- Added Popovers to catagories -->
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Straight" data-content="5 cards in order">
+                            Straight
+                        </span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Flush" data-content="5 cards in the same suit">
+                            Flush
+                        </span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="High Card" data-content="The highest value card in play">
+                            Highest Card
+                        </span>
                     </div>
                 </div>
                 <div class="card" id="StraightFlush">
@@ -105,8 +116,12 @@
                             straight can only go only as high as 9 through King, as 10 through Ace would be a royal flush.
                         </p>
                         <hr />
-                        <span class="badge rounded-pill bg-danger">Straight</span>
-                        <span class="badge rounded-pill bg-danger">Flush</span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Straight" data-content="5 cards in order">
+                            Straight
+                        </span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Flush" data-content="5 cards in the same suit">
+                            Flush
+                        </span>
                     </div>
                 </div>
                 <div class="card" id="FourOfAKind">
@@ -118,7 +133,9 @@
                             card included in the hand is the single highest avaliable cards besides the four of a kind group.
                         </p>
                         <hr />
-                        <span class="badge rounded-pill bg-danger">Four Of A Kind</span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Four Of A Kind" data-content="All 4 cards of the same value">
+                            Four Of A Kind
+                        </span>
                     </div>
                 </div>
                 <div class="card" id="FullHouse">
@@ -130,8 +147,12 @@
                             The player with the highest three of a card value wins the full house tiebreaker.
                         </p>
                         <hr />
-                        <span class="badge rounded-pill bg-danger">Three Of A Kind</span>
-                        <span class="badge rounded-pill bg-danger">Pair</span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Three Of A Kind" data-content="3 cards of the same value">
+                            Three Of A Kind
+                        </span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Pair" data-content="2 cards of the same value">
+                            Pair
+                        </span>
                     </div>
                 </div>
                 <div class="card" id="Flush">
@@ -143,7 +164,9 @@
                             otherwise it would be a straight flush or royal flush.
                         </p>
                         <hr />
-                        <span class="badge rounded-pill bg-danger">Flush</span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Flush" data-content="5 cards in the same suit">
+                            Flush
+                        </span>
                     </div>
                 </div>
                 <div class="card" id="Straight">
@@ -155,7 +178,9 @@
                             straight wins tiebreakers. If the cards were in the same it would be a royal or straight flush.
                         </p>
                         <hr />
-                        <span class="badge rounded-pill bg-danger">Straight</span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Straight" data-content="5 cards in order">
+                            Straight
+                        </span>
                     </div>
                 </div>
                 <div class="card" id="ThreeOfAKind">
@@ -167,7 +192,9 @@
                             high cards. Tiebreakers are settled first by who has the highest three of a kind then individual high cards.
                         </p>
                         <hr />
-                        <span class="badge rounded-pill bg-danger">Three Of A Kind</span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Three Of A Kind" data-content="3 cards of the same value">
+                            Three Of A Kind
+                        </span>
                     </div>
                 </div>
                 <div class="card" id="TwoPair">
@@ -179,8 +206,12 @@
                             tiebreaker is determined whoever has the highest value of pairs.
                         </p>
                         <hr />
-                        <span class="badge rounded-pill bg-danger">Pair</span>
-                        <span class="badge rounded-pill bg-danger">Pair</span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Pair" data-content="2 cards of the same value">
+                            Pair
+                        </span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Pair" data-content="2 cards of the same value">
+                            Pair
+                        </span>
                     </div>
                 </div>
                 <div class="card" id="">
@@ -192,7 +223,9 @@
                             have no other pairs, otherwise it would be a full house or two pair.
                         </p>
                         <hr />
-                        <span class="badge rounded-pill bg-danger">Pair</span>
+                        <span class="badge rounded-pill bg-danger" data-toggle="popover" title="Pair" data-content="2 cards of the same value">
+                            Pair
+                        </span>
                     </div>
                 </div>
                 <div class="card" id="HighestCard">
@@ -210,8 +243,10 @@
             </div>
         </section>
         <br />
+
+        <!-- Links to JavaScript -->
+        <script src="JS/main.js"></script>
+
     </div>
-    <!-- Links to JavaScript -->
-    <script src="JS/main.js"></script>
 </body>
 </html>
